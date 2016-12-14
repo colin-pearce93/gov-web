@@ -1,12 +1,27 @@
+/*
+
+  We need to implement a router and a layout template to keep the page working properly
+
+  router should be in the format,
+    => <div>
+          <Nav />
+          <Content />
+       </div>
+
+*/
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { browserHistory, Router, Route, IndexRoute } from 'react-router'
 
 import { initEnvironment } from '../actions/environment/Dispatchers';
 
-
-/*
-import SomeComponent from '../components/SomeComponent/Component';
-*/
+import Body from '../components/Body/Component';
+import BaseLayout from '../components/Layouts/Base/Component';
+import BodyLayout from '../components/Layouts/Body/Component';
+// import Nav from '../components/Nav/Component';
+// import Footer from '../components/Footer/Component';
+import Home from '../components/Home/Component';
 
 function mapStateToProps(state) {
   const { initialWidth, width, height } = state;
@@ -23,22 +38,16 @@ class App extends Component {
     dispatch(initEnvironment());
   }
   render() {
-    const { initialWidth, height } = this.props;
+    // const { width, initialWidth, height } = this.props;
     return(
-      <div style={{
-        backgroundColor: "rgba(248, 248, 248, 1)",
-        width: initialWidth,
-        height: height,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-        <p style={{
-          color: "rgba(0, 0, 0, 6)",
-          fontSize: 16,
-          fontWeight: "light"
-        }}>Get ready to start building your app</p>
-      </div>
+      <Router history={browserHistory}>
+        <Route { ...this.props } path="/" component={BaseLayout}>
+          <IndexRoute component={Home} />
+          <Route path="*" component={BodyLayout}>
+              <Route path="/Wall" component={Body}/>
+          </Route>
+        </Route>
+      </Router>
     );
   }
 };
