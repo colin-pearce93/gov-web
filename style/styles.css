@@ -1,0 +1,44 @@
+.border {
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, .5);
+  border-style: solid;
+}
+
+.header {
+  display: flex;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
+}
+
+.header * {
+  display: flex;
+}
+.flexSmall {
+  flex: 1;
+}
+.flexBig {
+  flex: 6;
+}
+.flexInner {
+  flex: 1;
+}
+.body {
+  min-width: 800px;
+  height: 900px;
+}
+#imgShrink {
+  height: 50px;
+}
+.headerFlex {
+  align-items: center;
+  justify-content: center;
+}
+
+#pageTop {
+  margin: 0px auto;
+  height: 50px;
+}
+
+#pageMiddle {
+  margin: 0px auto;
+  height: 666px;
+}
