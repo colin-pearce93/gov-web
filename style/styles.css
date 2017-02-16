@@ -6,6 +6,7 @@
 
 .header {
   display: flex;
+  height: 60px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
 }
 
@@ -21,24 +22,98 @@
 .flexInner {
   flex: 1;
 }
+.stateTitle {
+  font-size: 35px;
+}
+
 .body {
   min-width: 800px;
   height: 900px;
 }
 #imgShrink {
-  height: 50px;
+  height: 55px;
 }
+
 .headerFlex {
   align-items: center;
-  justify-content: center;
+  justify-content:center;
 }
 
 #pageTop {
   margin: 0px auto;
-  height: 50px;
 }
 
 #pageMiddle {
-  margin: 0px auto;
-  height: 666px;
+  margin: 4% 8%;
+}
+
+#body {
+  /*border: 5px solid black;*/
+}
+
+
+.bodyItem {
+  /*border: 5px solid black;*/
+  margin: 5px;
+  /*background: grey;*/
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+
+}
+
+.countyItem {
+  margin: 5px;
+  background: DeepSkyBlue;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.stateOffice {
+  margin: 5px;
+  background: DeepSkyBlue;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+  color: white;
+  text-align:center;
+  line-height: 25px;
+  font-weight: 600;
+}
+/* flex
+*/
+#body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bodyItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.countyItem {
+  width: 125px;
+}
+
+.stateOffice {
+  width: 205px;
+  height: 50px;
+}
+
+.cLink {
+  text-decoration: none;
+}
+
+.countyItem:hover {
+  background: black;
+}
+
+.stateOffice:hover {
+  background: black;
 }

@@ -1,6 +1,6 @@
 // document.getElementById(id).style.property = new style
 
-
+/**
 const load = () => {
   const apple = "apples";
   setTimeout(() => {
@@ -8,3 +8,4 @@ const load = () => {
   }, 5000)
 }
 window.onload = load;
+**/
